@@ -1,0 +1,11 @@
+envproxy:
+  build: .
+  ports:
+    - '80:80'
+    - '443:443'
+  volumes:
+    - .:/usr/src/app
+  environment:
+    # NGINX_DEST_PATH: /usr/src/app/nginx
+    PROXY_0_HOST: http://website.local.dockito.org
+    PROXY_0_PROXY_PASS_TO: 192.168.1.3:1337
