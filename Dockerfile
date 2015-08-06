@@ -14,7 +14,8 @@ RUN mkdir -p "$NODE_PATH" && \
 
 ENV PATH /usr/local/node/bin:$PATH
 
-RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
+COPY . /usr/src/app
+RUN npm install --unsafe-perm
 
 CMD [ "npm", "run", "generate-and-start-nginx" ]
