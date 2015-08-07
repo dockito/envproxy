@@ -6,7 +6,7 @@
   "author": "Max Claus Nunes <maxcnunes@gmail.com>",
   "scripts": {
     "start": "node bin/cli.js",
-    "start-nginx": "nginx -g \"daemon off;\"",
+    "start-nginx": "nginx",
     "generate-and-start-nginx": "npm start && npm run start-nginx"
   },
   "repository": {
